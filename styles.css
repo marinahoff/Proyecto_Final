@@ -7,19 +7,19 @@ body{
 
 h2{
     color: white;
-    margin-left: 20px;
+    margin-left: 1vw;
     }
 
 h3{
     color: black;
-    margin-left: 20px;
+    margin-left: 1vw;
     font-size: 18px;
     }
 
 p{
     background-color: white;
-    border-radius: 10px;
-    margin: 10px;
+    border-radius: 1.5vw;
+    margin: 1vw;
     text-align: center;
     padding-top: 0.7%;
     padding-bottom: 0.7%;
@@ -31,9 +31,23 @@ ul{padding-bottom: 2%;}
 
 .pic{
     border: 3px solid white;
-    margin-left: 20px;
+    margin-left: 1.4vw;
     }
 
+/* Iconos */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 48;
+    color: #EEC0B9;
+    position: relative;
+    left: 58%;
+    bottom: 0.6vw;
+    margin-left: 0.5%;
+    }
+    
 #wpp{
     position: fixed;
     bottom: 1vw;
@@ -48,15 +62,15 @@ ul{padding-bottom: 2%;}
 
 #buscador{
     position: relative;
-    left: 400px;
-    bottom: 15px;
+    left: 30%;
+    bottom: 1vw;
     font-size: 15px;
     }
 
 #lupa{
     position: relative;
-    left: 393px;
-    bottom: 6px;
+    left: 29.5%;
+    bottom: 0.37vw;
     }
 
 #navbar{
