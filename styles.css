@@ -29,11 +29,6 @@ footer{background-color: #AC6B6B;}
 
 ul{padding-bottom: 2%;}
 
-.pic{
-    border: 3px solid white;
-    margin-left: 1.4vw;
-    }
-
 /* Iconos */
 .material-symbols-outlined {
     font-variation-settings:
@@ -43,22 +38,19 @@ ul{padding-bottom: 2%;}
     'opsz' 48;
     color: #EEC0B9;
     position: relative;
-    left: 58%;
+    left: 60%;
     bottom: 0.6vw;
-    margin-left: 0.5%;
     }
 
-#wpp{
-    position: fixed;
-    bottom: 1vw;
-    right: 1vw;
-    }
+.wpp{right: 1vw}
 
-#insta{
+.insta{right: 5vw}
+
+.redes{
     position: fixed;
     bottom: 1.2vw;
-    right: 6vw;
-    }
+    width: 3.4%; 
+}
 
 #buscador{
     position: relative;
@@ -81,3 +73,14 @@ ul{padding-bottom: 2%;}
     padding-left: 3%;
     padding-bottom: 0.5%;
     }
+
+.container-img{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1vw 0 1vw;
+    }
+
+.container-img > img{
+    border: 3px solid white;
+    }
+
