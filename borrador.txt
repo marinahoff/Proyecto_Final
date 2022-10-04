@@ -1,8 +1,0 @@
-<div>
-    <img src="./Images/torta-choco.png" alt="Torta de chocolate" width="250" height="300" class="pic">
-    <img src="./Images/torta-limon.png" alt="Torta de limon" width="250" height="300" class="pic">
-    <img src="./Images/alfajor.png" alt="Alfajores de maicena" width="250" height="300" class="pic">
-    <img src="./Images/macaron.png" alt="Macaron" width="250" height="300" class="pic">
-    <img src="./Images/trufa.png" alt="Trufas de chocolate" width="250" height="300" class="pic">
-</div>
-

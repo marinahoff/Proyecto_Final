@@ -1,20 +1,62 @@
 *{font-family:'Poppins';}
 
-body{
-    background-color: #EEC0B9;
-    margin: 0;
-    }
+body{background-color: #EEC0B9;}
+
+.navbar{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+.container-fluid{
+    background-color: white; /* no se como poner el borde blanco */
+}
+
+h1{
+    font-size: 30px;
+    margin-left: 2vw;
+    margin-top: 1vw;
+    color: gray;
+}
+
+.btn-outline-success{
+  color: #EEC0B9; 
+  border-color: #EEC0B9; 
+}
+
+/*Iconos*/
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 800,
+    'GRAD' 0,
+    'opsz' 48;
+    color: #EEC0B9;
+    margin-left: 1vw;
+}
 
 h2{
     color: white;
+    font-size: 25px;
     margin-left: 1vw;
-    }
+    margin-top: 2vw;
+}
 
-h3{
-    color: black;
+.center{
+    text-align: center;
+}
+
+.card{
     margin-left: 1vw;
-    font-size: 18px;
-    }
+    margin-right: 1vw;
+}
+
+.margin{
+    margin-top: 100px;
+}
+
+.btn-primary{
+    background-color: #AC6B6B;
+    border-color: #AC6B6B;
+}
 
 p{
     background-color: white;
@@ -23,64 +65,27 @@ p{
     text-align: center;
     padding-top: 0.7%;
     padding-bottom: 0.7%;
-    }
+}
 
-footer{background-color: #AC6B6B;}
+footer{
+    background-color: #AC6B6B;
+    margin-top: 2vw;
+}
+
+h3{
+    color: black;
+    margin-left: 1vw;
+    font-size: 18px;
+}
 
 ul{padding-bottom: 2%;}
 
-/* Iconos */
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 1,
-    'wght' 700,
-    'GRAD' 0,
-    'opsz' 48;
-    color: #EEC0B9;
-    position: relative;
-    left: 60%;
-    bottom: 0.6vw;
-    }
-
-.wpp{right: 1vw}
-
-.insta{right: 5vw}
-
 .redes{
     position: fixed;
-    bottom: 1.2vw;
-    width: 3.4%; 
+    bottom: 25px;
+    width: 50px; 
 }
 
-#buscador{
-    position: relative;
-    left: 30%;
-    bottom: 1vw;
-    font-size: 15px;
-    }
+.wpp{right: 70px}
 
-#lupa{
-    position: relative;
-    left: 29.5%;
-    bottom: 0.37vw;
-    }
-
-#navbar{
-    background-color: white;
-    position: sticky;
-    top: 0;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-    padding-left: 3%;
-    padding-bottom: 0.5%;
-    }
-
-.container-img{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 1vw 0 1vw;
-    }
-
-.container-img > img{
-    border: 3px solid white;
-    }
-
+.insta{right: 10px}
