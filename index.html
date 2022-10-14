@@ -23,31 +23,35 @@
         <nav class="navbar navbar-expand-lg fixed-top bg-white">
             <div class="container-fluid">
               <img class="d-none d-lg-block" src="./Images/icono.png" alt="Icono" width="60px">
-              <h1 class="d-none d-lg-block"> La Cocina de Calu </h1>
+              <a href="#tclasicas-lg" class="d-none d-lg-block">
+                <h1 class="d-none d-lg-block"> La Cocina de Calu </h1>
+              </a>
               <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <img class="d-lg-none mx-auto d-block img-fluid" src="./Images/calu.png" alt="" width="150px">
+              <a href="#tclasicas">
+                <img class="d-lg-none mx-auto d-block img-fluid" src="./Images/calu.png" alt="" width="130px">
+              </a>
               <span class="material-symbols-outlined d-lg-block d-lg-none"> shopping_cart </span>
               <div class="navbar-collapse collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-lg-0">
+                  <hr>
                   <li class="nav-item dropdown d-lg-none">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Productos
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Tortas Clasicas</a></li>
-                      <li><a class="dropdown-item" href="#">Tortas Altas</a></li>
-                      <li><a class="dropdown-item" href="#">Alfajores</a></li>
+                      <li><a class="dropdown-item" href="#tclasicas">Tortas Clasicas</a></li>
+                      <li><a class="dropdown-item" href="#taltas">Tortas Altas</a></li>
+                      <li><a class="dropdown-item" href="#alfajores">Alfajores</a></li>
                     </ul>
                   </li>
                   <li class="nav-item d-lg-none">
-                    <a class="nav-link active" aria-current="page" href="#">Quienes Somos</a>
+                    <a class="nav-link active" aria-current="page" href="#qsomos">Quienes Somos</a>
                   </li>
                   <li class="nav-item d-lg-none">
-                    <a class="nav-link active" aria-current="page" href="#">Metodos de Pago</a>
+                    <a class="nav-link active" aria-current="page" href="#metodos">Metodos de Pago</a>
                   </li>
-                </ul>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="¿Que estas buscando?" aria-label="Search">
@@ -60,8 +64,8 @@
     </header>
 
     <main>
-        <h2 class="margin d-none d-lg-block"> Tortas Clasicas </h2>
-        <h2 class="margin-sm d-lg-none"> Tortas Clasicas </h2>
+        <h2 id="tclasicas-lg" class="margin d-none d-lg-block"> Tortas Clasicas </h2>
+        <h2 id="tclasicas" class="margin-sm d-lg-none"> Tortas Clasicas </h2>
         <div class="card-group center">
             <div class="card">
               <img src="./Images/cheesecake.png" class="card-img-top" alt="">
@@ -93,7 +97,7 @@
             </div>
           </div>
 
-          <h2>Tortas Altas</h2>
+          <h2 id="taltas">Tortas Altas</h2>
           <div class="card-group center">
             <div class="card">
               <img src="./Images/carrot.png" class="card-img-top" alt="">
@@ -125,7 +129,7 @@
             </div>
           </div>
 
-          <h2>Alfajores</h2>
+          <h2 id="alfajores">Alfajores</h2>
           <div class="card-group center">
             <div class="card">
               <img src="./Images/alf-blancos.png" class="card-img-top" alt="">
@@ -157,7 +161,7 @@
             </div>
           </div>
 
-          <h2> Quienes Somos </h2>
+          <h2 id="qsomos"> Quienes Somos </h2>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam iure alias fuga nisi minima. Hic libero sunt aliquam, laboriosam molestiae dicta ex blanditiis optio quos consectetur quas fugit dignissimos. Provident?
             Ab unde nobis odio dicta beatae quia rem? Debitis iure et voluptate, ullam magni, ut impedit eaque maiores totam animi dolores voluptatibus quos? Soluta architecto asperiores unde omnis dolorem quia.
@@ -170,10 +174,10 @@
         <a href="https://www.instagram.com/lacocinadecalu/" target="_blank">
             <img class="insta redes" src="./Images/insta.png" alt="Logo de Instagram">
         </a>
-        <h3>
+        <h3 id="metodos">
             Metodos de Pago
         </h3>
-        <ul type="">
+        <ul class="padd-pagar" type="">
             <li> Credito </li>
             <li> Debito </li>
             <li> Efectivo </li>
