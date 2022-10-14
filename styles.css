@@ -4,10 +4,11 @@ body{background-color: #EEC0B9;}
 
 .navbar{
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    padding: 5px;
 }
 
 .container-fluid{
-    background-color: white; /* no se como poner el borde blanco */
+    background-color: white;
 }
 
 h1{
@@ -17,12 +18,17 @@ h1{
     color: gray;
 }
 
+/* Boton de search */
 .btn-outline-success{
   color: #EEC0B9; 
   border-color: #EEC0B9; 
+  --bs-btn-hover-bg:#EEC0B9;
+  --bs-btn-hover-border-color:#EEC0B9;
+  --bs-btn-active-bg: #EEC0B9;
+  --bs-btn-active-border-color: white;
 }
 
-/*Iconos*/
+/*Icono*/
 .material-symbols-outlined {
     font-variation-settings:
     'FILL' 1,
@@ -49,13 +55,22 @@ h2{
     margin-right: 1vw;
 }
 
+.margin-sm{
+  margin-top: 120px;  
+}
+
 .margin{
     margin-top: 100px;
 }
 
+/* Boton de comprar */
 .btn-primary{
     background-color: #AC6B6B;
     border-color: #AC6B6B;
+    --bs-btn-hover-bg:#EEC0B9;
+    --bs-btn-hover-border-color:#EEC0B9;
+    --bs-btn-active-bg: #EEC0B9;
+    --bs-btn-active-border-color: white;
 }
 
 p{
@@ -89,3 +104,18 @@ ul{padding-bottom: 2%;}
 .wpp{right: 70px}
 
 .insta{right: 10px}
+
+.form-control::placeholder{
+    overflow: visible !important;
+}
+
+.navbar-toggler{
+    width: 40px;
+    height: 40px;
+    padding-left: 6.5px;
+}
+
+.navbar-toggler-icon{
+    width: 25px;
+    height: 30px;
+}
