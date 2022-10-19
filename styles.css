@@ -1,13 +1,23 @@
-* {font-family:'Poppins';}
+*{font-family:'Poppins';}
 
-body {background-color: #EEC0B9;}
+body{background-color: #EEC0B9;}
+
+/* Para que "La Cocina de Calu" no aparezca subrayado */
+a{text-decoration: none;}
 
 .navbar{
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     padding: 5px;
+    --bs-navbar-toggler-focus-width: 0.8px;
+    --bs-navbar-color: black;
+    --bs-navbar-hover-color: black;
 }
 
-.container-fluid {background-color: white;}
+.container-fluid{background-color: white;}
+
+#img-icono{
+    width: 60px;
+}
 
 h1{
     font-size: 30px;
@@ -16,19 +26,25 @@ h1{
     color: gray;
 }
 
-hr {color:#AC6B6B}
-
-/* Boton de search */
-.btn-outline-success{
-  color: #EEC0B9; 
-  border-color: #EEC0B9; 
-  --bs-btn-hover-bg:#EEC0B9;
-  --bs-btn-hover-border-color:#EEC0B9;
-  --bs-btn-active-bg: #EEC0B9;
-  --bs-btn-active-border-color: white;
+/* Boton hamburguesa */
+.navbar-toggler{
+    width: 40px;
+    height: 40px;
+    padding-left: 6.5px;
+    color: gray;
 }
 
-/*Icono*/
+/* Contenido de boton hamburguesa */
+.navbar-toggler-icon{
+    width: 25px;
+    height: 30px;
+}
+
+#img-logo{
+    width: 130px;
+}
+
+/* Carrito */
 .material-symbols-outlined {
     font-variation-settings:
     'FILL' 1,
@@ -39,11 +55,33 @@ hr {color:#AC6B6B}
     margin-left: 1vw;
 }
 
+hr {color:#AC6B6B}
+
+/* Para que el placeholder de buscar no aparezca cortado en chrome */
+.form-control::placeholder{
+    overflow: visible !important;
+}
+
+/* Boton de Search */
+.btn-outline-success{
+  color: #EEC0B9; 
+  border-color: #EEC0B9; 
+  --bs-btn-hover-bg:#EEC0B9;
+  --bs-btn-hover-border-color:#EEC0B9;
+  --bs-btn-active-bg: #EEC0B9;
+  --bs-btn-active-border-color: white;
+}
+
 h2{
     color: white;
     font-size: 25px;
     margin-left: 1vw;
     margin-top: 2vw;
+}
+
+/* Margen para que el navbar no tape la pagina */
+.margin{
+    margin-top: 100px;
 }
 
 .center{
@@ -55,15 +93,7 @@ h2{
     margin-right: 1vw;
 }
 
-.margin-sm{
-  margin-top: 120px;  
-}
-
-.margin{
-    margin-top: 100px;
-}
-
-/* Boton de comprar */
+/* Boton de Comprar */
 .btn-primary{
     background-color: #AC6B6B;
     border-color: #AC6B6B;
@@ -87,12 +117,6 @@ footer{
     margin-top: 2vw;
 }
 
-h3{
-    color: black;
-    margin-left: 1vw;
-    font-size: 18px;
-}
-
 .redes{
     position: fixed;
     bottom: 25px;
@@ -103,24 +127,31 @@ h3{
 
 .insta{right: 10px}
 
-/* Para que no aparezca cortado en chrome */
-.form-control::placeholder{
-    overflow: visible !important;
-}
-
-.navbar-toggler{
-    width: 40px;
-    height: 40px;
-    padding-left: 6.5px;
-}
-
-.navbar-toggler-icon{
-    width: 25px;
-    height: 30px;
+h3{
+    color: black;
+    margin-left: 1vw;
+    font-size: 18px;
 }
 
 ul{
     padding-bottom: 1%;
 }
 
-a{text-decoration: none;}
+/* Para cambiar el focus del placeholder de buscar */
+input[type="search"]:focus
+{   
+  border-color: gray;
+  box-shadow: none;
+
+}
+
+/* Para sacar el outline de "Productos" */
+.dropdown-toggle:focus{
+    outline: none;
+ }
+
+/* Para cambiar el hover del dropdown de "Productos" */
+.dropdown-menu{
+    --bs-dropdown-link-active-color: black;
+    --bs-dropdown-link-active-bg: #c7c8cab4;
+}
