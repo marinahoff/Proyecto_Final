@@ -1,0 +1,22 @@
+.sections{
+    margin: 10px 0 10px 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    overflow: auto;
+    white-space: nowrap;
+    background: transparent;
+    height: 100%;
+}
+
+.sections1{
+    display:inline-block;
+}
+
+.vanner1{
+    width: 40vh;
+    height: auto;
+}
+
+.center{
+    text-align: center;
+}
