@@ -1,6 +1,6 @@
 *{font-family:'Poppins';
-word-wrap: normal;}
-
+    word-wrap: normal;}
+    
 body{background-color: #EEC0B9;}
 
 /* Para que "La Cocina de Calu" no aparezca subrayado */
@@ -58,21 +58,6 @@ h1{
 
 hr {color:#AC6B6B}
 
-/* Para que el placeholder de buscar no aparezca cortado en chrome */
-.form-control::placeholder{
-    overflow: visible !important;
-}
-
-/* Boton de Search */
-.btn-outline-success{
-  color: #EEC0B9; 
-  border-color: #EEC0B9; 
-  --bs-btn-hover-bg:#EEC0B9;
-  --bs-btn-hover-border-color:#EEC0B9;
-  --bs-btn-active-bg: #EEC0B9;
-  --bs-btn-active-border-color: white;
-}
-
 h2{
     color: white;
     font-size: 25px;
@@ -83,10 +68,6 @@ h2{
 /* Margen para que el navbar no tape la pagina */
 .margin{
     margin-top: 100px;
-}
-
-.center{
-    text-align: center;
 }
 
 .card{
@@ -138,21 +119,28 @@ ul{
     padding-bottom: 1%;
 }
 
-/* Para cambiar el focus del placeholder de buscar */
-input[type="search"]:focus
-{   
-  border-color: gray;
-  box-shadow: none;
-
-}
-
 /* Para sacar el outline de "Productos" */
 .dropdown-toggle:focus{
     outline: none;
- }
+    }
 
 /* Para cambiar el hover del dropdown de "Productos" */
 .dropdown-menu{
     --bs-dropdown-link-active-color: black;
     --bs-dropdown-link-active-bg: #c7c8cab4;
+}
+
+.seccion{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    overflow: auto;
+    height: 100%;
+    white-space: nowrap;
+}
+
+.banner{
+    width: 250px;
+    height: auto;
+    display: inline-block;
+    text-align: center;
 }
