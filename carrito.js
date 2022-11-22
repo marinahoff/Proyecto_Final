@@ -92,14 +92,10 @@ const baseDeDatos = [
         const carritoSinDuplicados = [...new Set(carrito)];
 
         carritoSinDuplicados.forEach((item) => {
-
             const miItem = baseDeDatos.filter((itemBaseDatos) => {
-
                 return itemBaseDatos.id === parseInt(item);
             });
-
             const numeroUnidadesItem = carrito.reduce((total, itemId) => {
-
                 return itemId === item ? total += 1 : total;
             }, 0);
 
@@ -107,63 +103,48 @@ const baseDeDatos = [
             miNodo.classList.add('list-group-item');
             miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${divisa}${miItem[0].precio}`;
 
-            
             const miBoton = document.createElement('button');
-            miBoton.classList.add('btn', 'btn-danger', 'mx-5' ,'center');
+            miBoton.classList.add('btn','rounded-5','btn-dark', 'mx-2');
             miBoton.textContent = 'x';
-            miBoton.style.marginLeft = '0rem';
             miBoton.dataset.item = item;
             miBoton.addEventListener('click', borrarItemCarrito);
 
             miNodo.appendChild(miBoton);
             DOMcarrito.appendChild(miNodo);
         });
-
         DOMtotal.textContent = calcularTotal();
     }
 
     function borrarItemCarrito(evento) {
-
         const id = evento.target.dataset.item;
-
         let buff = JSON.parse(sessionStorage.getItem("carrito"));
         if (buff != null) {
             carrito = buff
         }
-
         carrito = carrito.filter((carritoId) => {
             return carritoId !== id;
         });
-
         sessionStorage.setItem("carrito", JSON.stringify(carrito));
-
         renderizarCarrito();
     }
 
     function calcularTotal() {
-
         return carrito.reduce((total, item) => {
-
             const miItem = baseDeDatos.filter((itemBaseDatos) => {
                 return itemBaseDatos.id === parseInt(item);
             });
-
             return total + miItem[0].precio;
         }, 0).toFixed(2);
     }
 
 
     function vaciarCarrito() {
-
         carrito = [];
-
         sessionStorage.setItem("carrito", JSON.stringify(carrito));
-
         renderizarCarrito();
     }
 
     function finalizarCompra() {
-
         carrito = [];
         total= 0;
         renderizarCarrito();

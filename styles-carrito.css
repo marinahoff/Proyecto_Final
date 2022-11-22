@@ -71,3 +71,11 @@ ul{
 .carrito{
     width: 50px;
 }
+
+.btn-dark{
+    color: #EEC0B9;
+    background-color: white;
+    border-color: white;
+    --bs-btn-hover-border-color:#AC6B6B;
+    --bs-btn-hover-bg:#AC6B6B;
+}
