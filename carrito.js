@@ -76,81 +76,80 @@ const baseDeDatos = [
     },
     ];
 
-    let carrito = [];
-    let divisa = '$'
+let carrito = [];
+let divisa = '$'
 
-    const DOMitems = document.querySelector('#items');
-    const DOMcarrito = document.querySelector('#carrito');
-    const DOMtotal = document.querySelector('#total');
-    const DOMbotonVaciar = document.querySelector('#boton-vaciar');
-    const DOMbotonFinalizar = document.querySelector('#liveToastBtn');
+const DOMitems = document.querySelector('#items');
+const DOMcarrito = document.querySelector('#carrito');
+const DOMtotal = document.querySelector('#total');
+const DOMbotonVaciar = document.querySelector('#boton-vaciar');
+const DOMbotonFinalizar = document.querySelector('#boton-finalizar');
 
-    function renderizarCarrito() {
+function renderizarCarrito() {
 
-        DOMcarrito.textContent = '';
-        carrito = JSON.parse(sessionStorage.getItem("carrito"));
-        const carritoSinDuplicados = [...new Set(carrito)];
+    DOMcarrito.textContent = '';
+    carrito = JSON.parse(sessionStorage.getItem("carrito"));
+    const carritoSinDuplicados = [...new Set(carrito)];
 
-        carritoSinDuplicados.forEach((item) => {
-            const miItem = baseDeDatos.filter((itemBaseDatos) => {
-                return itemBaseDatos.id === parseInt(item);
-            });
-            const numeroUnidadesItem = carrito.reduce((total, itemId) => {
-                return itemId === item ? total += 1 : total;
-            }, 0);
-
-            const miNodo = document.createElement('li');
-            miNodo.classList.add('list-group-item');
-            miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${divisa}${miItem[0].precio}`;
-
-            const miBoton = document.createElement('button');
-            miBoton.classList.add('btn','rounded-5','btn-dark', 'mx-2');
-            miBoton.textContent = 'x';
-            miBoton.dataset.item = item;
-            miBoton.addEventListener('click', borrarItemCarrito);
-
-            miNodo.appendChild(miBoton);
-            DOMcarrito.appendChild(miNodo);
+    carritoSinDuplicados.forEach((item) => {
+        const miItem = baseDeDatos.filter((itemBaseDatos) => {
+            return itemBaseDatos.id === parseInt(item);
         });
-        DOMtotal.textContent = calcularTotal();
+        const numeroUnidadesItem = carrito.reduce((total, itemId) => {
+            return itemId === item ? total += 1 : total;
+        }, 0);
+
+        const miNodo = document.createElement('li');
+        miNodo.classList.add('list-group-item');
+        miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${divisa}${miItem[0].precio}`;
+
+        const miBoton = document.createElement('button');
+        miBoton.classList.add('btn','rounded-5','btn-dark', 'mx-2');
+        miBoton.textContent = 'x';
+        miBoton.dataset.item = item;
+        miBoton.addEventListener('click', borrarItemCarrito);
+
+        miNodo.appendChild(miBoton);
+        DOMcarrito.appendChild(miNodo);
+    });
+    DOMtotal.textContent = calcularTotal();
+}
+
+function borrarItemCarrito(producto) {
+    const id = producto.target.dataset.item;
+    let buff = JSON.parse(sessionStorage.getItem("carrito"));
+    if (buff != null) {
+        carrito = buff
     }
-
-    function borrarItemCarrito(evento) {
-        const id = evento.target.dataset.item;
-        let buff = JSON.parse(sessionStorage.getItem("carrito"));
-        if (buff != null) {
-            carrito = buff
-        }
-        carrito = carrito.filter((carritoId) => {
-            return carritoId !== id;
-        });
-        sessionStorage.setItem("carrito", JSON.stringify(carrito));
-        renderizarCarrito();
-    }
-
-    function calcularTotal() {
-        return carrito.reduce((total, item) => {
-            const miItem = baseDeDatos.filter((itemBaseDatos) => {
-                return itemBaseDatos.id === parseInt(item);
-            });
-            return total + miItem[0].precio;
-        }, 0).toFixed(2);
-    }
-
-
-    function vaciarCarrito() {
-        carrito = [];
-        sessionStorage.setItem("carrito", JSON.stringify(carrito));
-        renderizarCarrito();
-    }
-
-    function finalizarCompra() {
-        carrito = [];
-        total= 0;
-        renderizarCarrito();
-    }
-
-    DOMbotonVaciar.addEventListener('click', vaciarCarrito);
-    DOMbotonFinalizar.addEventListener('click', finalizarCompra);
-
+    carrito = carrito.filter((carritoId) => {
+        return carritoId !== id;
+    });
+    sessionStorage.setItem("carrito", JSON.stringify(carrito));
     renderizarCarrito();
+}
+
+function calcularTotal() {
+    return carrito.reduce((total, item) => {
+        const miItem = baseDeDatos.filter((itemBaseDatos) => {
+            return itemBaseDatos.id === parseInt(item);
+        });
+        return total + miItem[0].precio;
+    }, 0).toFixed(2);
+}
+
+
+function vaciarCarrito() {
+    carrito = [];
+    sessionStorage.setItem("carrito", JSON.stringify(carrito));
+    renderizarCarrito();
+}
+
+function finalizarCompra() {
+    vaciarCarrito()
+    alert("¡Su compra ha sido realizada con exito!")
+}
+
+DOMbotonVaciar.addEventListener('click', vaciarCarrito);
+DOMbotonFinalizar.addEventListener('click', finalizarCompra);
+
+renderizarCarrito();

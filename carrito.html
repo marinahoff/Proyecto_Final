@@ -1,14 +1,21 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito</title>
-    <!-- Font -->
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles-carrito.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito</title>
+  <!-- Botstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles-carrito.css">
+  <!-- Font -->
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./Images/apple-touch-icon.png">
 </head>
+
 <body>
   <header>
     <nav class="navbar navbar-expand-lg fixed-top sticky bg-white">
@@ -49,31 +56,23 @@
       <img class="d-lg-block d-none carrito" src="./Images/carrito.png" alt="Carrito">
     </nav>
   </header>
-    <main>
-      <div class="container" style="margin-top: 50px ;">
-        <div class="row">
-          <div class="col" style="margin-top: 40px; text-align: center">
-            <h2>Carrito</h2>
-            <ul id="carrito" class="list-group"></ul>
-            <p>Total: $ <span id="total"></span></p>
-            <button id="boton-vaciar" class="btn btn-dark">Vaciar</button>
-            <button type="button" class="btn btn-light" id="liveToastBtn"> Finalizar Compra</button>
-            <div class="toast-container position-fixed bottom-0 end-0 p-3">
-              <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="toast-header">
-                  <strong class="me-auto">Compra Finalizada</strong>
-                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-                <div class="toast-body">
-                  Su compra se ha realizado con exito!
-                </div>
-              </div>
-            </div>
-          </div>
+
+  <main>
+    <div class="container margin">
+      <div class="row">
+        <div class="col margin center">
+          <h2>Carrito</h2>
+          <ul id="carrito" class="list-group"></ul>
+          <hr id="hr-carrito">
+          <p>Total: $ <span id="total"></span></p>
+          <button id="boton-vaciar" class="btn"> Vaciar </button>
+          <button type="button" class="btn" id="boton-finalizar"> Finalizar Compra </button>
         </div>
       </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <script src="./carrito.js"></script>
-  </body>
+    </div>
+  </main>
+  
+</body>
+
+<script src="./carrito.js"></script>
 </html>

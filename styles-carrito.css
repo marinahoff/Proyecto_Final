@@ -53,10 +53,6 @@ h2{
     margin-top: 2vw;
 }
 
-ul{
-    padding-bottom: 1%;
-}
-
 /* Para sacar el outline de "Productos" */
 .dropdown-toggle:focus{
     outline: none;
@@ -72,10 +68,37 @@ ul{
     width: 50px;
 }
 
+/* Botones de borrar item del carrito */
 .btn-dark{
     color: #EEC0B9;
     background-color: white;
     border-color: white;
     --bs-btn-hover-border-color:#AC6B6B;
     --bs-btn-hover-bg:#AC6B6B;
+    --bs-btn-active-bg: #EEC0B9;
+    --bs-btn-active-border-color: #EEC0B9;
+}
+
+hr {color:#AC6B6B}
+
+#hr-carrito{
+    color: white;
+}
+
+#boton-vaciar{
+    background-color: white;
+}
+
+#boton-finalizar{
+    background-color: #AC6B6B;
+    color: white;
+    
+}
+
+.margin{
+    margin-top: 50px;
+}
+
+.center{
+    text-align: center;
 }
