@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <!-- Font -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles-carrito.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top sticky bg-white">
+      <div class="container-fluid">
+        <img id="img-icono" class="d-none d-lg-block" src="./Images/icono.png" alt="Icono">
+        <a href="./index.html" class="d-none d-lg-block">
+          <h1 class="d-none d-lg-block"> La Cocina de Calu </h1>
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="./index.html">
+          <img id="img-logo" class="d-lg-none mx-auto d-block" src="./Images/logo.png" alt="Logo">
+        </a>
+        <img class="d-lg-block d-lg-none carrito" src="./Images/carrito.png" alt="Carrito">
+        <div class="navbar-collapse collapse sticky" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-lg-0">
+            <hr>
+            <li class="nav-item dropdown d-lg-none">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Productos
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./index.html#tclasicas">Tortas Clasicas</a></li>
+                <li><a class="dropdown-item" href="./index.html#taltas">Tortas Altas</a></li>
+                <li><a class="dropdown-item" href="./index.html#alfajores">Alfajores</a></li>
+              </ul>
+            </li>
+            <li class="nav-item d-lg-none">
+              <a class="nav-link active" aria-current="page" href="./index.html#qsomos">Quienes Somos</a>
+            </li>
+            <li class="nav-item d-lg-none">
+              <a class="nav-link active" aria-current="page" href="./index.html#metodos">Metodos de Pago</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <img class="d-lg-block d-none carrito" src="./Images/carrito.png" alt="Carrito">
+    </nav>
+  </header>
+    <main>
+      <div class="container" style="margin-top: 50px ;">
+        <div class="row">
+            <div class="col" style="margin-top: 40px; text-align: center">
+                <h2>Carrito</h2>
+                <ul id="carrito" class="list-group"></ul>
+                <p>Total: $ <span id="total"></span></p>
+                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                <button type="button" class="btn btn-success" id="liveToastBtn"> Finalizar Compra</button>
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                      <strong class="me-auto">Compra Finalizada</strong>
+                      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                      Su compra se ha realizado con exito!
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="./carrito.js"></script>
+  </body>
+</html>

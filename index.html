@@ -15,8 +15,6 @@
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="./Images/apple-touch-icon.png">
-  <!-- Iconos -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -33,7 +31,9 @@
         <a href="#tclasicas">
           <img id="img-logo" class="d-lg-none mx-auto d-block" src="./Images/logo.png" alt="Logo">
         </a>
-        <span class="material-symbols-outlined d-lg-block d-lg-none"> shopping_cart </span>
+        <a href="carrito.html">
+          <img class="d-lg-block d-lg-none carrito" src="./Images/carrito.png" alt="Carrito">
+        </a>
         <div class="navbar-collapse collapse sticky" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-lg-0">
             <hr>
@@ -55,8 +55,10 @@
             </li>
           </ul>
         </div>
-        <span class="material-symbols-outlined d-none d-lg-block"> shopping_cart </span>
       </div>
+      <a href="carrito.html">
+        <img class="d-lg-block d-none carrito" src="./Images/carrito.png" alt="Carrito">
+      </a>
     </nav>
   </header>
 
@@ -68,45 +70,50 @@
             <img src="./Images/cheesecake.png" class="card-img-top" alt="Cheesecake Clasico">
             <div class="card-body ">
               <h5 class="card-title">Cheesecake Clásico</h5>
+              <h5>$4.400</h5>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" onclick="agregarCarrito('1')" class="btn btn-primary">Comprar</a>
             </div>
           </div>
         <div class="card banner">
             <img src="./Images/ch-ddl.png" class="card-img-top" alt="Cheesecake DDL">
             <div class="card-body">
-                <h5 class="card-title">Cheesecake DDL</h5>
+              <h5 class="card-title">Cheesecake DDL</h5>
+              <h5>$3.960</h5>
             </div>
             <div class="card-footer">
-                <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" onclick="agregarCarrito('2')" class="btn btn-primary">Comprar</a>
             </div>
         </div>
         <div class="card banner">
             <img src="./Images/marquise.png" class="card-img-top" alt="Marquise">
             <div class="card-body">
-                <h5 class="card-title">Marquise</h5>
+              <h5 class="card-title">Marquise</h5>
+              <h5>$4.990</h5>
             </div>
             <div class="card-footer">
-                <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" onclick="agregarCarrito('3')" class="btn btn-primary">Comprar</a>
             </div>
         </div>
         <div class="card banner">
             <img src="./Images/lemon.png" class="card-img-top" alt="Key Lemon Pie">
             <div class="card-body">
-                <h5 class="card-title">Key Lemon Pie</h5>
+              <h5 class="card-title">Key Lemon Pie</h5>
+              <h5>$4.180</h5>
             </div>
             <div class="card-footer">
-                <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" onclick="agregarCarrito('4')" class="btn btn-primary">Comprar</a>
             </div>
         </div>
         <div class="card banner">
             <img src="./Images/havannet.png" class="card-img-top" alt="Havannet">
             <div class="card-body">
-                <h5 class="card-title">Havannet</h5>
+              <h5 class="card-title">Havannet</h5>
+              <h5>$3.960</h5>
             </div>
             <div class="card-footer">
-                <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" onclick="agregarCarrito('5')" class="btn btn-primary">Comprar</a>
             </div>
         </div>
     </div>
@@ -117,46 +124,51 @@
         <div class="card banner">
             <img src="./Images/carrot.png" class="card-img-top" alt="Carrot Cake">
             <div class="card-body ">
-                <h5 class="card-title">Carrot Cake</h5>
+              <h5 class="card-title">Carrot Cake</h5>
+              <h5>$5.500</h5>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" onclick="agregarCarrito(6)" class="btn btn-primary">Comprar</a>
             </div>
           </div>
         <div class="card banner">
             <img src="./Images/choco-vegan.png" class="card-img-top" alt="Choco-Vegan">
             <div class="card-body">
-                <h5 class="card-title">Choco-Vegan</h5>
+              <h5 class="card-title">Choco-Vegan</h5>
+              <h5>$5.830</h5>
             </div>
             <div class="card-footer">
-                <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" onclick="agregarCarrito(7)" class="btn btn-primary">Comprar</a>
             </div>
         </div>
         <div class="card banner">
             <img src="./Images/limon.png" class="card-img-top" alt="Limon y Chia">
             <div class="card-body">
-                <h5 class="card-title">Limon y Chia</h5>
+              <h5 class="card-title">Limon y Chia</h5>
+              <h5>$5.280</h5>
             </div>
             <div class="card-footer">
-                <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" onclick="agregarCarrito(8)" class="btn btn-primary">Comprar</a>
             </div>
         </div>
         <div class="card banner">
             <img src="./Images/velvet.png" class="card-img-top" alt="Red Velvet">
             <div class="card-body">
-                <h5 class="card-title">Red Velvet</h5>
+              <h5 class="card-title">Red Velvet</h5>
+              <h5>$5.500</h5>
             </div>
             <div class="card-footer">
-                <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" onclick="agregarCarrito(9)" class="btn btn-primary">Comprar</a>
             </div>
         </div>
 		<div class="card banner">
             <img src="./Images/letter.png" class="card-img-top" alt="Red Velvet">
             <div class="card-body">
-                <h5 class="card-title">Letter / Number Cake</h5>
+              <h5 class="card-title">Letter / Number Cake</h5>
+              <h5>$4.400</h5>
             </div>
             <div class="card-footer">
-                <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" onclick="agregarCarrito(10)" class="btn btn-primary">Comprar</a>
             </div>
         </div>
     </div>
@@ -167,46 +179,51 @@
         <div class="card banner">
             <img src="./Images/alf-blancos.png" class="card-img-top" alt="Alfajores Blancos">
             <div class="card-body ">
-                <h5 class="card-title">Alfajores Blancos</h5>
+              <h5 class="card-title">Alfajores Blancos</h5>
+              <h5>$2.800</h5>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" onclick="agregarCarrito(11)" class="btn btn-primary">Comprar</a>
             </div>
           </div>
         <div class="card banner">
             <img src="./Images/alf-negros.png" class="card-img-top" alt="Alfajores Negros">
             <div class="card-body">
-                <h5 class="card-title">Alfajores Negros</h5>
+              <h5 class="card-title">Alfajores Negros</h5>
+              <h5>$2.700</h5>
             </div>
             <div class="card-footer">
-                <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" onclick="agregarCarrito(12)" class="btn btn-primary">Comprar</a>
             </div>
         </div>
         <div class="card banner">
             <img src="./Images/alf-leche.png" class="card-img-top" alt="Alfajores con Leche">
             <div class="card-body">
-                <h5 class="card-title">Alfajores con Leche</h5>
+              <h5 class="card-title">Alfajores con Leche</h5>
+              <h5>$2.940</h5>
             </div>
             <div class="card-footer">
-                <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" onclick="agregarCarrito(13)" class="btn btn-primary">Comprar</a>
             </div>
         </div>
         <div class="card banner">
             <img src="./Images/maicena.png" class="card-img-top" alt="Alfajores de Maicena">
             <div class="card-body">
-                <h5 class="card-title">Alfajores de Maicena</h5>
+              <h5 class="card-title">Alfajores de Maicena</h5>
+              <h5>$2.700</h5>
             </div>
             <div class="card-footer">
-                <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" onclick="agregarCarrito(14)" class="btn btn-primary">Comprar</a>
             </div>
         </div>
         <div class="card banner">
             <img src="./Images/mix.png" class="card-img-top" alt="Havannet">
             <div class="card-body">
-                <h5 class="card-title">Mix Alfajores</h5>
+              <h5 class="card-title">Mix Alfajores</h5>
+              <h5>$2.910</h5>
             </div>
             <div class="card-footer">
-                <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" onclick="agregarCarrito(15)" class="btn btn-primary">Comprar</a>
             </div>
         </div>
     </div>
@@ -217,6 +234,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam iure alias fuga nisi minima. Hic libero sunt aliquam, laboriosam molestiae dicta ex blanditiis optio quos consectetur quas fugit dignissimos. Provident?
         Ab unde nobis odio dicta beatae quia rem? Debitis iure et voluptate, ullam magni, ut impedit eaque maiores totam animi dolores voluptatibus quos? Soluta architecto asperiores unde omnis dolorem quia.
     </p>
+
   </main>
 
   <footer>
@@ -233,6 +251,8 @@
       <li> Debito </li>
       <li> Efectivo </li>
       <li> Mercado Pago </li>
+	<br>
   </footer>
 </body>
+<script src="./script.js"></script>
 </html>

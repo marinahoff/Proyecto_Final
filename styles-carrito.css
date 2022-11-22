@@ -4,7 +4,6 @@
 body{background-color: #EEC0B9;}
 
 
-
 /* Para que "La Cocina de Calu" no aparezca subrayado */
 a{text-decoration: none;}
 
@@ -47,63 +46,11 @@ h1{
     width: 130px;
 }
 
-hr {color:#AC6B6B}
-
 h2{
     color: white;
     font-size: 25px;
     margin-left: 1vw;
     margin-top: 2vw;
-}
-
-/* Margen para que el navbar no tape la pagina */
-.margin{
-    margin-top: 100px;
-}
-
-.card{
-    margin-left: 1vw;
-    margin-right: 1vw;
-}
-
-/* Boton de Comprar */
-.btn-primary{
-    background-color: #AC6B6B;
-    border-color: #AC6B6B;
-    --bs-btn-hover-bg:#EEC0B9;
-    --bs-btn-hover-border-color:#EEC0B9;
-    --bs-btn-active-bg: #EEC0B9;
-    --bs-btn-active-border-color: white;
-}
-
-p{
-    background-color: white;
-    border-radius: 1.5vw;
-    margin: 1vw;
-    text-align: center;
-    padding-top: 0.7%;
-    padding-bottom: 0.7%;
-}
-
-footer{
-    background-color: #AC6B6B;
-    margin-top: 50px;
-}
-
-.redes{
-    position: fixed;
-    bottom: 25px;
-    width: 50px; 
-}
-
-.wpp{right: 70px}
-
-.insta{right: 10px}
-
-h3{
-    color: black;
-    margin-left: 1vw;
-    font-size: 18px;
 }
 
 ul{
@@ -119,25 +66,6 @@ ul{
 .dropdown-menu{
     --bs-dropdown-link-active-color: black;
     --bs-dropdown-link-active-bg: #c7c8cab4;
-}
-
-.seccion{
-    overflow-x: scroll;
-    overflow-y: hidden;
-    overflow: auto;
-    height: 100%;
-    white-space: nowrap;
-}
-
-.banner{
-    width: 250px;
-    height: auto;
-    display: inline-block;
-    text-align: center;
-}
-
-#qsomos{
-    margin-top: 50px;
 }
 
 .carrito{
