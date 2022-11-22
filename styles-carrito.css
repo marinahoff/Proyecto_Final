@@ -65,10 +65,10 @@ h2{
 }
 
 .carrito{
-    width: 50px;
+    width: 40px;
 }
 
-/* Botones de borrar item del carrito */
+/* Boton de borrar item del carrito */
 .btn-dark{
     color: #EEC0B9;
     background-color: white;
@@ -92,7 +92,6 @@ hr {color:#AC6B6B}
 #boton-finalizar{
     background-color: #AC6B6B;
     color: white;
-    
 }
 
 .margin{

@@ -3,8 +3,6 @@
     
 body{background-color: #EEC0B9;}
 
-
-
 /* Para que "La Cocina de Calu" no aparezca subrayado */
 a{text-decoration: none;}
 
@@ -141,5 +139,5 @@ ul{
 }
 
 .carrito{
-    width: 50px;
+    width: 40px;
 }
