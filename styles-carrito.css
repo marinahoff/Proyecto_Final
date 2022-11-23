@@ -87,11 +87,13 @@ hr {color:#AC6B6B}
 
 #boton-vaciar{
     background-color: white;
+    margin-bottom: 15px;
 }
 
 #boton-finalizar{
     background-color: #AC6B6B;
     color: white;
+    margin-bottom: 15px;
 }
 
 .margin{
@@ -100,4 +102,11 @@ hr {color:#AC6B6B}
 
 .center{
     text-align: center;
+}
+
+#boton-volver{
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    color: gray;
 }
